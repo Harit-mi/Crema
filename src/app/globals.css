@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-space: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-editorial: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-newsreader: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  color: #19120F;
+  background-color: #FAF7F2;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typographic Precision Utilities */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+  font-optical-sizing: auto;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Headings Typographic Balance */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* Button Tactile Micro-Interactions */
+.btn-tactile {
+  box-shadow: 2px 2px 0px 0px rgba(14, 9, 7, 0.9);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.btn-tactile:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px 0px rgba(14, 9, 7, 0.9);
+}
+
+.btn-tactile:active:not(:disabled) {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 0.5px 0.5px 0px 0px rgba(14, 9, 7, 0.9);
+  transition-duration: 40ms;
+}
+
+.btn-tactile-caramel {
+  box-shadow: 2px 2px 0px 0px #7E3B09;
+}
+.btn-tactile-caramel:hover:not(:disabled) {
+  box-shadow: 3px 3px 0px 0px #7E3B09;
+}
+.btn-tactile-caramel:active:not(:disabled) {
+  box-shadow: 0.5px 0.5px 0px 0px #7E3B09;
+}
+
+.btn-tactile-secondary {
+  box-shadow: 2px 2px 0px 0px #DFD2C0;
+}
+.btn-tactile-secondary:hover:not(:disabled) {
+  box-shadow: 3px 3px 0px 0px #9E8F88;
+}
+.btn-tactile-secondary:active:not(:disabled) {
+  box-shadow: 0.5px 0.5px 0px 0px #9E8F88;
+}
+
+/* Architectural Hairline Dividers */
+.hairline-border {
+  border: 1px solid #E5DBD0;
+}
+
+.hairline-b {
+  border-bottom: 1px solid #E5DBD0;
+}
+
+.hairline-t {
+  border-top: 1px solid #E5DBD0;
+}
+
+.hairline-r {
+  border-right: 1px solid #E5DBD0;
+}
+
+.hairline-l {
+  border-left: 1px solid #E5DBD0;
+}
+
+/* Editorial Ticket Perforations & Stamp Badges */
+.ticket-edge-t {
+  background-image: radial-gradient(circle at 10px 0, transparent 8px, #FAF7F2 8.5px);
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.ticket-edge-b {
+  background-image: radial-gradient(circle at 10px 10px, transparent 8px, #FAF7F2 8.5px);
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.stamp-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid currentColor;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFD2C0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CEBC9F;
+}

@@ -1,0 +1,75 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        cream: {
+          50: '#FAF7F2',
+          100: '#F5EFE6',
+          200: '#ECE2D4',
+          300: '#DFD2C0',
+          400: '#CEBC9F',
+          500: '#B8A17E',
+        },
+        espresso: {
+          50: '#F6F3F2',
+          100: '#E4DFDC',
+          200: '#C7BDB8',
+          300: '#9E8F88',
+          600: '#4D3E38',
+          700: '#382B26',
+          800: '#261B17',
+          900: '#19120F',
+          950: '#0E0907',
+        },
+        forest: {
+          50: '#F2F7F4',
+          100: '#E1EDE6',
+          200: '#C0DCCC',
+          600: '#2A5C43',
+          700: '#1E4733',
+          800: '#173627',
+          900: '#10261B',
+          950: '#091610',
+        },
+        caramel: {
+          50: '#FDF7F0',
+          100: '#FAECDB',
+          200: '#F4D8B3',
+          400: '#E08A38',
+          500: '#C46D1C',
+          600: '#A45311',
+          700: '#7E3B09',
+        },
+      },
+      fontFamily: {
+        display: ['var(--font-display)', '"Space Grotesk"', 'sans-serif'],
+        editorial: ['var(--font-editorial)', '"Newsreader"', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)', '"DM Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        body: ['var(--font-sans)', '"DM Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        serif: ['var(--font-editorial)', '"Newsreader"', 'Georgia', 'serif'],
+        mono: ['var(--font-mono)', '"JetBrains Mono"', 'ui-monospace', 'monospace'],
+      },
+      boxShadow: {
+        'tactile-sm': '1px 1px 0px 0px rgba(14, 9, 7, 0.9)',
+        'tactile': '2px 2px 0px 0px rgba(14, 9, 7, 0.9)',
+        'tactile-md': '3px 3px 0px 0px rgba(14, 9, 7, 0.9)',
+        'tactile-caramel': '2px 2px 0px 0px #A45311',
+        'tactile-forest': '2px 2px 0px 0px #091610',
+        'tactile-subtle': '2px 2px 0px 0px #DFD2C0',
+      },
+      letterSpacing: {
+        tightest: '-0.04em',
+        tighter: '-0.02em',
+        'wide-editorial': '0.12em',
+        'widest-editorial': '0.22em',
+      },
+    },
+  },
+  plugins: [],
+};
